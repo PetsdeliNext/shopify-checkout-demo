@@ -1,0 +1,44 @@
+query Input {
+  cart {
+    buyerIdentity {
+      customer {
+        id
+        amountSpent {
+          amount
+          currencyCode
+        }
+        displayName
+        email
+        hasAnyTag
+        numberOfOrders
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+        currencyCode
+      }
+      totalAmount {
+        amount
+        currencyCode
+      }
+      totalDutyAmount {
+        amount
+        currencyCode
+      }
+      totalTaxAmount {
+        amount
+        currencyCode
+      }
+    }
+    deliveryGroups {
+      deliveryAddress {
+        provinceCode
+      }
+      deliveryOptions {
+        handle
+        title
+      }
+    }
+  }
+}

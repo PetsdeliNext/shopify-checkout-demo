@@ -1,0 +1,54 @@
+{
+  "cart": {
+    "buyerIdentity": {
+      "customer": {
+        "id": "gid://shopify/Customer/7296650805531",
+        "amountSpent": {
+          "amount": "0.0",
+          "currencyCode": "EUR"
+        },
+        "displayName": "camille feghali",
+        "email": "camille.feghali@petsdeli.de",
+        "hasAnyTag": false,
+        "numberOfOrders": 0
+      }
+    },
+    "cost": {
+      "subtotalAmount": {
+        "amount": "699.95",
+        "currencyCode": "EUR"
+      },
+      "totalAmount": {
+        "amount": "699.95",
+        "currencyCode": "EUR"
+      },
+      "totalDutyAmount": null,
+      "totalTaxAmount": null
+    },
+    "deliveryGroups": [
+      {
+        "deliveryAddress": {
+          "provinceCode": null
+        },
+        "deliveryOptions": [
+          {
+            "handle": "bd4646711e3cb4a6c11935b3a357b80a-746cf5417094dfd5e1321c818df5e7bc",
+            "title": "DHL Standard"
+          },
+          {
+            "handle": "bd4646711e3cb4a6c11935b3a357b80a-0af91a8850c43a0d507d34392e211597",
+            "title": "DHL Standard Free"
+          },
+          {
+            "handle": "bd4646711e3cb4a6c11935b3a357b80a-3e484812e5e7740f9e70afd39a965234",
+            "title": "Standard"
+          },
+          {
+            "handle": "bd4646711e3cb4a6c11935b3a357b80a-c020016fab94e802fc8c976f25c6964a",
+            "title": "DPD Express"
+          }
+        ]
+      }
+    ]
+  }
+}
