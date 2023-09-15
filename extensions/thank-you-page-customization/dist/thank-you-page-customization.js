@@ -18488,12 +18488,11 @@ ${errorInfo.componentStack}`);
     const [productReview, setProductReview] = (0, import_react15.useState)("");
     const [loading, setLoading] = (0, import_react15.useState)(false);
     const [productReviewed, setProductReviewed] = useStorageState("product-reviewed");
-    (0, import_react15.useEffect)(() => {
-      fetch("https://dog.ceo/api/breeds/image/random").then((response) => response.json()).then((data) => console.log(data.image));
-    }, []);
     function handleSubmit() {
       return __async(this, null, function* () {
         setLoading(true);
+        const result = yield fetch("https://dog.ceo/api/breeds/image/random");
+        console.log(result.json());
         return new Promise((resolve) => {
           setTimeout(() => {
             console.log("Submitted:", productReview);

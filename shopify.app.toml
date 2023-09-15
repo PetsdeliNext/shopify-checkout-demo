@@ -2,7 +2,7 @@
 
 name = "checkout-demo"
 client_id = "e89e28215e8ca04836b7489ba465258b"
-application_url = "https://rap-occupied-hampton-stylish.trycloudflare.com"
+application_url = "https://small-helicopter-diagnosis-eleven.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://rap-occupied-hampton-stylish.trycloudflare.com/auth/callback",
-  "https://rap-occupied-hampton-stylish.trycloudflare.com/auth/shopify/callback",
-  "https://rap-occupied-hampton-stylish.trycloudflare.com/api/auth/callback"
+  "https://small-helicopter-diagnosis-eleven.trycloudflare.com/auth/callback",
+  "https://small-helicopter-diagnosis-eleven.trycloudflare.com/auth/shopify/callback",
+  "https://small-helicopter-diagnosis-eleven.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

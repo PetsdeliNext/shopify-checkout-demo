@@ -24,7 +24,15 @@ async function styleCheckout(checkoutProfileId: string) {
     `
     mutation checkoutBrandingUpsert($checkoutBrandingInput: CheckoutBrandingInput!, $checkoutProfileId: ID!) {
         checkoutBrandingUpsert(checkoutBrandingInput: $checkoutBrandingInput, checkoutProfileId: $checkoutProfileId) {
+          
           checkoutBranding {
+            customizations {
+              
+              secondaryButton{
+                background
+              }
+            }
+            
             designSystem {
               # This property group applies to global corner radius token values
               cornerRadius {
@@ -51,6 +59,11 @@ async function styleCheckout(checkoutProfileId: string) {
                 }
                 # This property group applies to the primary button
                 primary {
+                  accent
+                  foreground
+                  background
+                }
+                critical {
                   accent
                   foreground
                   background
@@ -93,31 +106,52 @@ async function styleCheckout(checkoutProfileId: string) {
     {
       checkoutProfileId,
       checkoutBrandingInput: {
+        customizations: {
+          secondaryButton: {
+            background: 'SOLID',
+          },
+          // header: {
+          //   logo: {
+          //     image: {
+          //       mediaImageId: 'gid://shopify/ProductVariant/46267474411803',
+          //     },
+          //     maxWidth: 1,
+          //   },
+          // },
+        },
         designSystem: {
           cornerRadius: {
-            large: 30,
+            large: 50,
           },
           colorPalette: {
             canvas: {
-              background: '#FFE926',
-              foreground: '#D10088',
+              background: '#545454',
+              foreground: '#506482',
             },
+            //main content
             color1: {
-              background: '#FFFAFD',
-              foreground: '#2E001E',
+              background: '#fafafa',
+              foreground: '#19335a',
             },
+            //secondary content
             color2: {
-              background: '#FFF5FB',
-              foreground: '#2E001E',
+              background: '#fafafa',
+              foreground: '#19335a',
             },
+            critical: {
+              accent: '#ff5768',
+              background: '#ff5768',
+              foreground: '#ffffff',
+            },
+            //primary action buttons
             primary: {
               accent: '#1773B0',
-              background: '#FF9CDD',
-              foreground: '#2E001E',
+              background: '#19335a',
+              foreground: '#ffffff',
             },
             interactive: {
-              accent: '#D10088',
-              foreground: '#D10088',
+              accent: '#a6a6a6',
+              foreground: '#19335a',
               background: null,
             },
           },

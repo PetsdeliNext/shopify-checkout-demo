@@ -78,16 +78,19 @@ function ProductReview() {
   const [productReviewed, setProductReviewed] =
     useStorageState('product-reviewed');
 
-  useEffect(() => {
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then((response) => response.json())
-      // 4. Setting *dogImage* to the image url that we received from the response above
-      .then((data) => console.log(data.image));
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://dog.ceo/api/breeds/image/random')
+  //     .then((response) => response.json())
+  //     // 4. Setting *dogImage* to the image url that we received from the response above
+  //     .then((data) => console.log(data.image));
+  // }, []);
 
   async function handleSubmit() {
     // Simulate a server request
     setLoading(true);
+    const result = await fetch('https://dog.ceo/api/breeds/image/random')
+    console.log(result.json())
+    
     return new Promise((resolve) => {
       setTimeout(() => {
         // Send the review to the server
